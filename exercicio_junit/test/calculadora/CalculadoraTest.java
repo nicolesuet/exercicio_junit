@@ -78,6 +78,24 @@ public class CalculadoraTest {
 		Assertions.assertEquals(0, multiplicacao);		
 	}
 	
+	@Test
+	public void testSomatoriaDeUmNumeroMaiorQueZero() {
+		int somatoria = calc.somatoria(4);		
+		Assertions.assertEquals(10, somatoria);		
+	}
+	
+	@Test
+	public void testSomatoriaDeUmNumeroMenorQueZero() {
+		int somatoria = calc.somatoria(-4);		
+		Assertions.assertEquals(0, somatoria);		
+	}
+	
+	@Test
+	public void testSomatoriaDeZero() {
+		int somatoria = calc.somatoria(0);		
+		Assertions.assertEquals(0, somatoria);		
+	}
+	
 	
 	@Test
 	public void testDivisaoDoisNumeros() {
