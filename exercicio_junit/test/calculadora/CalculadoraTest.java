@@ -96,13 +96,46 @@ public class CalculadoraTest {
 		Assertions.assertEquals(0, somatoria);		
 	}
 	
+	@Test
+	public void testComparaNumeroIguais() {
+		int compara = calc.compara(3, 3);		
+		Assertions.assertEquals(0, compara);		
+	}
+	
+	@Test
+	public void testComparaNumeroComUmMaior() {
+		int compara = calc.compara(3, 9);		
+		Assertions.assertEquals(-1, compara);		
+	}
+	
+	@Test
+	public void testComparaNumeroComUmMenor() {
+		int compara = calc.compara(9, 3);		
+		Assertions.assertEquals(1, compara);		
+	}
+	
 	
 	@Test
 	public void testDivisaoDoisNumeros() {
 		int divisao = calc.divisao(8, 4);
 		assertTrue(divisao == 2);
 	}
+
+	@Test
+	public void testNumeroEhPositivo() {
+		Assertions.assertEquals(true, calc.ehPositivo(4));		
+	}
+
+	@Test
+	public void testNumeroEhNegativo() {
+		Assertions.assertEquals(false, calc.ehPositivo(-4));		
+	}
 	
+	@Test
+	public void testNumeroZeroEhPositivo() {
+		Assertions.assertEquals(true, calc.ehPositivo(0));		
+	}
+
 	@Test
 	public void testDivisaoPorZero() {
 		try {
