@@ -50,6 +50,34 @@ public class CalculadoraTest {
 	}
 	
 	
+	@DisplayName("Testa multiplicação de dois números positivos")
+	@Test
+	public void testMultiplicacaoDoisNumerosPositivos() {
+		int multiplicacao = calc.multiplicacao(4, 10);		
+		Assertions.assertEquals(40, multiplicacao);		
+	}
+	
+	@DisplayName("Testa multiplicação de dois números negativos")
+	@Test
+	public void testMultiplicacaoDoisNumerosNegativos() {
+		int multiplicacao = calc.multiplicacao(-4, -10);		
+		Assertions.assertEquals(40, multiplicacao);		
+	}
+	
+	@DisplayName("Testa multiplicação de um número negativo por um positivo")
+	@Test
+	public void testMultiplicacaoDeUmNumeroNegativoPorUmPositivo() {
+		int multiplicacao = calc.multiplicacao(-4, 10);		
+		Assertions.assertEquals(-40, multiplicacao);		
+	}
+	
+	@DisplayName("Testa multiplicação de de um número por zero")
+	@Test
+	public void testMultiplicacaoDeUmNumeroPorZero() {
+		int multiplicacao = calc.multiplicacao(4, 0);		
+		Assertions.assertEquals(0, multiplicacao);		
+	}
+	
 	
 	@Test
 	public void testDivisaoDoisNumeros() {
